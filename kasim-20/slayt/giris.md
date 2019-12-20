@@ -113,8 +113,6 @@ Tum bu tipler ve tip siniflari karmasasi icerisinde, problemlerimizin cozumu ola
 
 > fromIntegral (length "length bize Int getirecek") + pi
 
-### Daha Detayli Bilgi Icin
-www.learnyouahaskell.com/types-and-typeclasses
 
 # Biraz Sayilar
 
@@ -219,7 +217,7 @@ subtract x y = y-x
 
 > [(i,j) | i <- [1..5], j <- [1..5]]
 
-## Enum :)
+## Enum
 
 > [1..10]
 
@@ -229,6 +227,14 @@ subtract x y = y-x
 
 # Kelime Frekansi Problemlemi
 
-Elimizde bir paragraf ,uzun bir string, oldugunu dusunelim. Bu paragrafta en cok tekrar eden n tane kelimeyi bize verecek programi nasil yazabiliriz?
+Verilen bir metinde en cok tekrar eden _n_ kelimeyi bize verecek fonksiyonu yazmak
 
-# Mola
+# Kaynaklar
+
+## Kitaplar
++ Thinking Functional with Haskell
++ Beginning Haskell
+
+## Web
+www.learnyouahaskell.com/
+

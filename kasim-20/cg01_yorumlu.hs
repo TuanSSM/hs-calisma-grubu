@@ -37,6 +37,7 @@ pfactors n = [ p | p <- divisors n, isPrime p ]
 
 -- asal carpanlarini kuvvetleriyle vermesi icin listeledigimizde dusuk kuvvetlerini atmasi icin
 -- daha iyi bir yolu olmali
+
 kucuguAt :: [(Int,Int)] -> [(Int,Int)]
 kucuguAt (x:[])             = x : []
 kucuguAt (x:xs) | a == b    = kucuguAt xs
@@ -44,17 +45,16 @@ kucuguAt (x:xs) | a == b    = kucuguAt xs
                 where a = fst x
                       b = fst $ head xs
 
--- kuvveti 10'a kadar olan sayilari aldik daha iyi bir yazimi olmali
+-- kuvveti 10'a kadar olan sayilari aldik daha iyi bir fonksiyon bulunabilir
+
 allPPfactors n = [ (p,k) | p <- pfactors n, k <- [1..10], n `mod` (p^k) == 0] 
 
 ppfactors :: Int -> [(Int,Int)]
 ppfactors = kucuguAt . allPPfactors
 -- (.) fonksiyon carpimidir 
 
-
 dikacu :: Int -> [(Int,Int,Int)]
 dikacu n = [ (x,y,z) | x <- [1..n], y <- [1..n], z <- [1..n], x*x + y*y == z*z, x <= y]
-
 -- Buradaki _ "dont care" umursama anlamina gelen bir motiftir ve xs listesinden aldigi elemani bir yerde kullanmaz
 -- Her aldigi eleman icin listeye bir ekler
 -- xs serbest secilebilir
@@ -94,4 +94,3 @@ zipWith' f _      _      = []
 foldr' f z []     = []
 foldr' f z (x:xs) = x `f` z : foldr' f z xs
 -- listenin sag tarafindan ilk elemani z degeri ile f fonksiyonuna sokar ardindan sonucu 2. elemanla f fonksiyonuna onun sonucunu 3. elemanla...
-
