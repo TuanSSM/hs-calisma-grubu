@@ -4,7 +4,9 @@ Calisma grubu materyalleri -kodlar, slaytlar, vb.-
 ## Kaynaklar
 
 ### Web
-[www.learnyouahaskell.com](Learn You a Haskell for Great Good)
+[Learn You a Haskell for Great Good
+](www.learnyouahaskell.com
+)
 
 ### Kitaplar
 
