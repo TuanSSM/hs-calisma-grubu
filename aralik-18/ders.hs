@@ -77,16 +77,4 @@ data Yuz = Bir | Iki | Uc | Dort | Bes | Alti
 data Renk = Kupa | Sinek | Karo | Maca
           deriving (Show, Enum)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+deste = [ (renk, yuz) | renk <- [Kupa ..] , yuz <- [Bir ..] ]
